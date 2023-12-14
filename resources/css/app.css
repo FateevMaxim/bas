@@ -61,3 +61,6 @@
     min-height: 89vh;
     background-color: #eeeeee;
 }
+.qr_center img {
+    margin: 0 auto;
+}
