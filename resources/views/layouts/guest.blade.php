@@ -60,7 +60,7 @@
     </body>
     <script>
         $(document).ready(function(){
-            $('.phone').inputmask('+79999999999');
+            $('.phone').inputmask('9999999999');
         });
     </script>
     <script src=”{{ asset('/sw.js') }}”>

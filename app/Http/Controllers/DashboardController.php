@@ -18,7 +18,7 @@ class DashboardController extends Controller
     {
         $qr = QrCodes::query()->select()->where('id', 1)->first();
         $qrChina = QrCodes::query()->select()->where('id', 2)->first();
-        $config = Configuration::query()->select('address', 'title_text', 'address_two')->first();
+        $config = Configuration::query()->select('address', 'title_text', 'address_two', 'whats_app')->first();
         $cities = City::query()->select('title')->get();
         if (Auth::user()->is_active === 1 && Auth::user()->type === null){
             $tracks = ClientTrackList::query()

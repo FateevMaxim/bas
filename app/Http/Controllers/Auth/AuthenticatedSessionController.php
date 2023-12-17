@@ -39,7 +39,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): View | RedirectResponse
     {
-
+        $request->login = "+7".$request->login;
         $request->authenticate();
 
         $request->session()->regenerate();
