@@ -41,10 +41,11 @@
         </button>
         <div class="relative w-full">
             <x-text-input id="login" class="block phone mt-1 w-full border-2" type="text" name="login" placeholder="+7 701 775 7272" :value="old('login')" required autocomplete="login" />
+        </div>
+        </div>
+        <div class="flex items-center w-9/12 mx-auto">
             <x-input-error :messages="$errors->get('login')" class="mt-2" />
         </div>
-        </div>
-
 
         <!-- City -->
         <div class="mt-4">
