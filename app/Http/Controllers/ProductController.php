@@ -44,14 +44,14 @@ class ProductController extends Controller
         $city = null;
 
         if (Auth::user()->type === 'almatyin'){
-            $city_field = 'to_city';
+            $city_field = 'to_almaty';
             $city_value = 'Получено на складе в Алматы';
             $city = 'Алматы';
-            $reg_field = 'reg_city';
-        }elseif (Auth::user()->type === 'karagandain'){
-            $city_field = 'to_almaty';
-            $city_value = 'Получено на складе в Караганде';
             $reg_field = 'reg_almaty';
+        }elseif (Auth::user()->type === 'karagandain'){
+            $city_field = 'to_city';
+            $city_value = 'Получено на складе в Караганде';
+            $reg_field = 'reg_city';
         }elseif (Auth::user()->type === 'astanain'){
             $city_field = 'to_city';
             $city_value = 'Получено на складе в Астане';
