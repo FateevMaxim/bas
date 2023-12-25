@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ProfileUpdateRequest;
+use App\Exports\AllUsersExport;
 use App\Models\Configuration;
 use App\Models\Message;
 use App\Models\User;
@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ProfileController extends Controller
 {
@@ -110,5 +111,9 @@ class ProfileController extends Controller
         $message->message = $request['message'];
         $message->save();
         return redirect('dashboard')->with('message', 'Сообщение отправлено');
+    }
+    public function allUsersExport()
+    {
+        return Excel::download(new AllUsersExport(), 'allusers.xlsx');
     }
 }
