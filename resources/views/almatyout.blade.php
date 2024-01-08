@@ -47,7 +47,7 @@
 
                                     <h4 class="mt-4">Дата регистрации в Китае</h4>
                                     <p><small id="to_china"></small></p>
-                                    <h4>Дата регистрации в Караганде</h4>
+                                    <h4>Дата регистрации в Алматы</h4>
                                     <p><small id="to_almaty"></small></p>
                                     <div id="filial_one">
                                         <h4>Отправлено в город <span id="city_name"></span></h4>
